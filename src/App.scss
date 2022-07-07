@@ -4,11 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  color: $blue;
+  color: black;
 }
 
 .App {
@@ -49,12 +49,12 @@ main>* {
 
 .icon {
   font-size: 6vh;
+  margin-bottom: 2vh;
 }
 
 .content {
   font-size: 3vh;
-  padding-top: 5vh;
-  margin-bottom: 18vh;
+  margin-bottom: 8vh;
   text-align: center;
 }
 

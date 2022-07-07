@@ -14,11 +14,15 @@ function App() {
       </div>
       <div className="container center">
         <main className="">
-          <div className="icon center">
-            <MdSettingsSuggest />
-          </div>
           <div className="content center">
-            Tu powstaje strona Pinglish.pl
+            bakert.pl <br/>
+            Pilotaż pojazdu nienormatywnego
+          </div>
+          <div className="icon center">
+              <MdSettingsSuggest />
+          </div>
+          <div className="center">
+            Strona w budowie
           </div>
         </main>
       </div>
