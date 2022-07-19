@@ -1,8 +1,10 @@
 @import 'colors.scss';
 
+
 .offer {
-  min-height: 500px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   row-gap: 10vh;
+  display: flex;
 }

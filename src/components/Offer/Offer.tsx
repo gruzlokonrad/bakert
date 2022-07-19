@@ -4,12 +4,10 @@ import styles from './Offer.module.scss';
 
 const Offer = () => {
   return (
-    <section>
+    <section id="offer">
       <Container>
         <div className={styles.offer}>
-            <Item />
-            <Item />
-            <Item />
+          <Item />
         </div>
       </Container>
     </section>

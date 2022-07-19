@@ -1,19 +1,61 @@
 import Container from 'container/Container';
 import styles from './Contact.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faAt, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
+
+
 
 const Contact = () => {
   return (
-    <section className={styles.contactSection}>
+    <section id="contact" className={styles.contactSection}>
       <Container>
         <div className={styles.contact}>
           <div className={styles.contact__content}>
-            Phone
-            Email
-            Address
+            <div className={styles.contact__info}>
+              <a href="tel:+48 886 555 202">
+                <div className={styles.contact__icon}>
+                  <FontAwesomeIcon icon={faPhone} />
+                </div>
+                <p>
+                  +48 886 555 202
+                </p>
+              </a>
+            </div>
+            <div className={styles.contact__info}>
+              <a href="mailto:office@bakert.pl?subject='Informacje'">
+                <div className={styles.contact__icon}>
+                  <FontAwesomeIcon icon={faAt} />
+                </div>
+                <p>
+                  office@bakert.pl
+                </p>
+              </a>
+            </div>
+            <div className={styles.contact__info}>
+              <a href="https://goo.gl/maps/nK77ddqPLkvRjGvU7" target="_blank">
+              <div className={styles.contact__icon}>
+                <FontAwesomeIcon icon={faLocationDot} />
+              </div>
+              <p>
+                Dąbrowa 16a <br />42-110 Dąbrowa
+              </p>
+            </a>
+          </div>
+          <div className={styles.contact__info}>
+            <a href="https://www.facebook.com/Bakert-109039317724110/">
+              <div className={styles.contact__icon}>
+                <FontAwesomeIcon icon={faFacebookF} />
+              </div>
+              <p>
+                Facebook
+              </p>
+            </a>
           </div>
         </div>
-      </Container>
-    </section>
+      </div>
+    </Container>
+    </section >
   )
 }
 

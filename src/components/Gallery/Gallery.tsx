@@ -11,7 +11,7 @@ const Gallery = () => {
 
 
   return (
-    <section className={styles.gallerySection}>
+    <section id="gallery" className={styles.gallerySection}>
       <Carousel
       showArrows={true}
       dynamicHeight={true}

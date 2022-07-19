@@ -14,9 +14,9 @@ const Nav = () => {
           </div>
           <div className={styles.items}>
             <ul>
-              <li><a href="#">Oferta</a></li>
-              <li><a href="#">Galeria</a></li>
-              <li><a href="#">Kontakt</a></li>
+              <li><a href="#offer">Oferta</a></li>
+              <li><a href="#gallery">Galeria</a></li>
+              <li><a href="#contact">Kontakt</a></li>
             </ul>
           </div>
         </div>
