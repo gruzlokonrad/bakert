@@ -3,7 +3,7 @@ import Container from 'components/Container/Container';
 import styles from './Header.module.scss';
 import logo from 'img/logo.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   const [isNavActive, setIsNavActive] = useState(false)
@@ -19,7 +19,7 @@ const Header = () => {
               </a>
             </div>
             <button className={styles.hamburger} onClick={() => {setIsNavActive(!isNavActive)}}>
-              <FontAwesomeIcon icon={faBars} />
+              <FontAwesomeIcon icon={isNavActive ? faXmark : faBars} />
             </button>
           </div>
           <div className={isNavActive ? `${styles.items} ${styles.active}` : styles.items}>
