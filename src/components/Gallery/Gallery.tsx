@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Gallery = () => {
   const galleryArr = [];
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < 9; i++) {
     galleryArr.push(i + 1);
   }
 
@@ -18,6 +18,7 @@ const Gallery = () => {
       autoPlay={true}
       infiniteLoop={true}
       showStatus={false}
+      emulateTouch={false}
       >
         {galleryArr.map((el: any, index: any) => {
           let imgLink = require(`img/gallery/${el}.jpg`);

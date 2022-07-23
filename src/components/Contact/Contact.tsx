@@ -1,4 +1,4 @@
-import Container from 'container/Container';
+import Container from 'components/Container/Container';
 import styles from './Contact.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faAt, faLocationDot } from '@fortawesome/free-solid-svg-icons';
@@ -11,6 +11,7 @@ const Contact = () => {
     <section id="contact" className={styles.contactSection}>
       <Container>
         <div className={styles.contact}>
+          <h2 className={styles.header}>Kontakt</h2>
           <div className={styles.contact__content}>
             <div className={styles.contact__info}>
               <a href="tel:+48 886 555 202">
@@ -23,12 +24,12 @@ const Contact = () => {
               </a>
             </div>
             <div className={styles.contact__info}>
-              <a href="mailto:office@bakert.pl?subject='Informacje'">
+              <a href="mailto:konrad.grzelewski@bakert.pl?subject='Pytanie o usługę'">
                 <div className={styles.contact__icon}>
                   <FontAwesomeIcon icon={faAt} />
                 </div>
                 <p>
-                  office@bakert.pl
+                  konrad.grzelewski@bakert.pl
                 </p>
               </a>
             </div>
@@ -43,7 +44,7 @@ const Contact = () => {
             </a>
           </div>
           <div className={styles.contact__info}>
-            <a href="https://www.facebook.com/Bakert-109039317724110/">
+            <a href="https://www.facebook.com/Bakert-109039317724110/" target="_blank">
               <div className={styles.contact__icon}>
                 <FontAwesomeIcon icon={faFacebookF} />
               </div>

@@ -1,0 +1,12 @@
+@import 'global.scss';
+
+.stackingCard {
+  display: flex;
+  flex-direction: column;
+}
+
+@include view-mobile {
+  .stackingCard {
+    row-gap: 5vh;
+  }
+}

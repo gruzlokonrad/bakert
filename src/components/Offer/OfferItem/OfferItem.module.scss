@@ -1,0 +1,29 @@
+@import 'colors.scss';
+@import 'global.scss';
+
+.offerItem {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    font-size: 1.8em;
+  }
+  
+  p {
+    padding: 0 80px;
+  }
+}
+
+
+@include view-mobile {
+  .offerItem {
+    // min-height: 60vh;
+    p {
+      padding: 0;
+    }
+  }
+}

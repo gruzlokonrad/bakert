@@ -1,0 +1,112 @@
+@import 'colors.scss';
+@import 'global.scss';
+
+.navbar {
+  position: relative;
+  display: flex;
+
+  * {
+    color: $text-dark;
+    text-decoration: none;
+  }
+
+  img,
+  a {
+    -webkit-animation: fadein 1.5s;
+    -moz-animation: fadein 1.5s;
+    -ms-animation: fadein 1.5s;
+    -o-animation: fadein 1.5s;
+    animation: fadein 1.5s;
+  }
+
+  .menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 8vh;
+    padding: 1vh 0;
+    .logo {
+      img {
+        height: 100%;
+      }
+    }
+    .hamburger {
+      display: none;
+    }
+  }
+}
+
+.items {
+  &__link {
+    display: flex;
+    height: 100%;
+
+    a {
+      margin: auto;
+      padding: 0 20px;
+      min-width: 80px;
+      text-align: center;
+
+      &:hover {
+        transition: 0.3s ease;
+        background: $white;
+        font-size: 18px;
+        border-top: 3px solid $black;
+        border-bottom: 3px solid $black;
+        padding: 5px 20px;
+      }
+    }
+  }
+}
+
+@include view-mobile {
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+
+    .menu {
+      .hamburger {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border: none;
+
+
+        svg {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+
+  .items {
+    display: none;
+    height: 90vh;
+    align-items: center;
+
+    &__link {
+      position: relative;
+      flex-direction: column;
+      width: 100%;
+      overflow-y: auto;
+      margin-bottom: 10vh;
+      height: auto;
+      max-height: 75vh;
+
+      a {
+        font-size: 25px;
+        margin: 1vh 0;
+        padding: 2vh 0;
+
+        &:hover {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  .active {
+    display: flex;
+  }
+}

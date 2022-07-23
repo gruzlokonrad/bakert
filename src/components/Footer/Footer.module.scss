@@ -1,13 +1,15 @@
 @import 'colors.scss';
 
 footer {
-  background-color: $black;
-  width: 100%;
   display: flex;
   justify-content: center;
+  width: 100%;
+  background-color: $black;
 }
 
 .footer {
+  background-color: $black;
+  background-image: none;
   text-align: center;
   color: $white;
   padding: 2vh 0;

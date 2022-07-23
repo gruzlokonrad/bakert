@@ -1,11 +1,12 @@
 @import 'colors.scss';
+@import 'global.scss';
 
 .contactSection {
   width: 100%;
   background-image: url('../../img/contact_img.jpg');
   background-attachment: fixed;
-  background-size: 100%;
-  background-position: right -50px;
+  background-size: cover;
+  background-position: right top;
   background-repeat: no-repeat;
   min-height: 50vh;
   height: 100%;
@@ -13,11 +14,17 @@
 
 .contact {
   text-align: center;
-  color: $white;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   width: 100%;
   height: 100%;
+  gap: 5vh;
+
+  .header {
+    align-self: center;
+  }
+
 
   &__content {
     color: $black;
@@ -30,13 +37,12 @@
     padding: 10px 0;
     margin-top: 20px;
     display: flex;
-    
+
     p {
       margin: 0;
       padding: 0;
-      
     }
-    
+
     a {
       display: flex;
       color: $black;
@@ -54,5 +60,65 @@
       margin-right: 20px;
       font-size: 30px;
     }
+  }
+}
+
+@include view-xSmall {
+
+  // * {
+  //   border: 1px solid white !important;
+  // }
+  .contactSection {
+    background: none;
+    background-color: $black;
+
+    .contact {
+      align-items: center;
+      color: $white;
+
+      .info {
+          word-wrap: break-word !important;
+          width: 200px !important;
+          overflow-y: auto;
+      }
+
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+
+
+@include view-mobile {
+
+  .contactSection {
+    display: flex;
+    align-items: center;
+    background-position: 50% top;
+    // background: none;
+    // background-color: $black;
+    min-height: 60vh;
+
+    .header {
+      font-size: 30px;
+    }
+
+    .contact {
+      padding-top: 5vh;
+
+      &__content {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+}
+
+@include view-large {
+  .contactSection {
+    background-position: right 30%;
   }
 }

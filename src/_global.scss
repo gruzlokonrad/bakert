@@ -1,6 +1,25 @@
 // screen width
+$xs-view: 650px;
 $sm-view: 991.98px;
-$md-view: 1530px;
+$xl-view: 1550px;
+
+// animation fadein
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
 
 section {
   padding: 10vh 0;
@@ -15,14 +34,24 @@ section {
   // background-size: cover;
 }
 
+// * > div[class*="animate"] {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+@mixin view-xSmall {
+  @media screen and (max-width: #{$xs-view}) {
+    @content;
+  }
+}
 @mixin view-mobile {
   @media screen and (max-width: #{$sm-view}) {
     @content;
   }
 }
 
-@mixin view-tablet {
-  @media screen and (max-width: #{$md-view}) {
+@mixin view-large {
+  @media screen and (min-width: #{$xl-view}) {
     @content;
   }
 }

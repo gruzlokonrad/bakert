@@ -1,4 +1,17 @@
+@import 'global.scss';
+
 .gallerySection {
+  max-width: $sm-view;
+
+
+  div[class*="carousel"] {
+    overflow: hidden;
+  }
+
+  * {
+    width: 100%;
+  }
+
   img {
     max-height: 80vh;
     object-fit: cover;
