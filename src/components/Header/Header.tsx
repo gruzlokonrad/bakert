@@ -18,15 +18,15 @@ const Header = () => {
                 <img src={logo} alt="logo_name" />
               </a>
             </div>
-            <button className={styles.hamburger} onClick={() => {setIsNavActive(!isNavActive)}}>
+            <button className={styles.hamburger} onClick={() => { setIsNavActive(!isNavActive) }}>
               <FontAwesomeIcon icon={isNavActive ? faXmark : faBars} />
             </button>
           </div>
           <div className={isNavActive ? `${styles.items} ${styles.active}` : styles.items}>
             <div className={styles.items__link}>
-              <a href="#stackingCard" onClick={()=>{setIsNavActive(false)}}>Oferta</a>
-              <a href="#gallery" onClick={()=>{setIsNavActive(false)}}>Galeria</a>
-              <a href="#contact" onClick={()=>{setIsNavActive(false)}}>Kontakt</a>
+              <a href="#stackingCard" onClick={() => { setIsNavActive(false) }}>Oferta</a>
+              <a href="#gallery" onClick={() => { setIsNavActive(false) }}>Galeria</a>
+              <a href="#contact" onClick={() => { setIsNavActive(false) }}>Kontakt</a>
             </div>
           </div>
         </div>
